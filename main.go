@@ -67,7 +67,6 @@ func main() {
 			}()
 
 			mustQuery(ctx, conn, "SELECT sum(b) FROM t_101;")
-			mustExec(ctx, conn, "SET tidb_trace_id=''")
 		})()
 	})()
 }
